@@ -99,7 +99,7 @@ const modals = () => {
   modalTrigger('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
   modalTrigger('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
   openByScroll('.fixed-gift');
-  modalTriggerByTime('.popup-consultation', 5000);
+  modalTriggerByTime('.popup-consultation', 50000);
 
 };
 
