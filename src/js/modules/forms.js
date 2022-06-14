@@ -1,19 +1,15 @@
-// import checkNumberInputs from "./checkNumberInputs";
-
-const forms = (state) => {
+const forms = () => {
   const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('input'),
         upload = document.querySelectorAll('[name="upload"]');
 
-  // checkNumberInputs("input[name='user_phone']");
-
   const message = {
-    loading: 'Загрузка данных',
-    succes: 'Спасибо! Скоро с вами свяжутся!',
-    failure: 'Что-то пошло не так...',
-    spinner: 'assets/img/spinner.gif',
-    ok: 'assets/img/ok.png',
-    fail: 'assets/img/fail.png'
+        loading: 'Загрузка данных',
+        succes: 'Спасибо! Скоро с вами свяжутся!',
+        failure: 'Что-то пошло не так...',
+        spinner: 'assets/img/spinner.gif',
+        ok: 'assets/img/ok.png',
+        fail: 'assets/img/fail.png'
   };
 
   const path = {
@@ -23,8 +19,8 @@ const forms = (state) => {
 
   const postData = async (url, data) => {
     let res = await fetch(url, {
-      method: 'POST',
-      body: data
+        method: 'POST',
+        body: data
     });
 
     return await res.text();
@@ -34,6 +30,7 @@ const forms = (state) => {
     inputs.forEach((item) => {
       item.value = '';
     });
+    
     upload.forEach(item => {
       item.previousElementSibling.textContent = 'Файл не выбран';
     });
